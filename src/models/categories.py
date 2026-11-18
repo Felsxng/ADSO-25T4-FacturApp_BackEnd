@@ -7,6 +7,7 @@ class Category(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(50), nullable=False)
     description = Column(String(200), nullable=True)
+    active = Column(Integer, default=1)  # 1 for active, 0 for inactive
 
     def __init__(self, name, description=None):
         self.name = name
